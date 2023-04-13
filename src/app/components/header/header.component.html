@@ -1,1 +1,37 @@
-<p>header works!</p>
+<div class="relative w-52 h-screen">
+  <div class="container-nav flex flex-col text-xl">
+    <div class="twitter-logo">
+      <img class="w-11 h-11 p-1 rounded-full cursor-pointer duration-200 hover:bg-neutral-800" src="assets/twitter-logo.png" alt="Logo do Twitter">
+    </div>
+    <nav class="mt-2 mb-3">
+      <ul class="flex flex-col gap-2">
+        <li class="py-2 duration-200 hover:bg-neutral-800 rounded-3xl cursor-pointer"><a class="ml-3" href="#">Home</a></li>
+        <li class="py-2 duration-200 hover:bg-neutral-800 rounded-3xl cursor-pointer"><a class="ml-3" href="#">Explore</a></li>
+        <li class="py-2 duration-200 hover:bg-neutral-800 rounded-3xl cursor-pointer"><a class="ml-3" href="#">Notifications</a></li>
+        <li class="py-2 duration-200 hover:bg-neutral-800 rounded-3xl cursor-pointer"><a class="ml-3" href="#">Messages</a></li>
+        <li class="py-2 duration-200 hover:bg-neutral-800 rounded-3xl cursor-pointer"><a class="ml-3" href="#">Bookmarks</a></li>
+        <li class="py-2 duration-200 hover:bg-neutral-800 rounded-3xl cursor-pointer"><a class="ml-3" href="#">Twitter Blue</a></li>
+        <li class="py-2 duration-200 hover:bg-neutral-800 rounded-3xl cursor-pointer"><a class="ml-3" href="#">Profile</a></li>
+        <li class="py-2 duration-200 hover:bg-neutral-800 rounded-3xl cursor-pointer"><a class="ml-3" href="#">More</a></li>
+      </ul>
+    </nav>
+    <div class="tweet-button">
+      <button class="w-full p-2 bg-blue-400 font-bold text-lg rounded-3xl duration-200 hover:opacity-90">Tweet</button>
+    </div>
+  </div>
+  <div class="container-user absolute bottom-0 w-full">
+    <p class="mb-1 text-center text-xs text-gray-400">Criado por</p>
+    <div class="container-user__content flex justify-around items-center mb-5 py-1 cursor-pointer duration-200 hover:bg-neutral-800 rounded-3xl">
+      <div class="avatar w-9 h-9 flex justify-center items-center bg-blue-400 rounded-full">
+        J
+      </div>
+      <div class="user-name">
+        <p>João</p>
+        <span class="text-sm text-gray-400">@joaoliveirapb</span>
+      </div>
+      <div class="more-options text-sm">
+        •••
+      </div>
+    </div>
+  </div>
+</div>
