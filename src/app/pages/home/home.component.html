@@ -1,5 +1,11 @@
-<div class="container-home w-3/4 mx-auto">
-  <header>
+<div class="container-home max-w-5xl grid grid-cols-4 mx-auto">
+  <header class="col-span-1">
     <app-header></app-header>
   </header>
+  <main class="col-span-2 border-x-[1px] border-gray-700">
+    <app-new-post></app-new-post>
+  </main>
+  <aside class="col-span-1">
+    <app-tweet></app-tweet>
+  </aside>
 </div>
