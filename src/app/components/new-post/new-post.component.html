@@ -1,8 +1,6 @@
-<div class="px-3 py-2 border-y-[1px] border-gray-700">
+<div class="px-3 py-2">
   <div class="flex gap-1">
-    <div class="avatar w-9 h-9 flex justify-center items-center bg-sky-500 border border-sky-600 font-bold rounded-full">
-      J
-    </div>
+    <app-avatar></app-avatar>
     <div class="flex-1">
       <textarea
         [rows]="rows"
@@ -10,10 +8,8 @@
         class="w-full p-2 bg-transparent rounded-md resize-none appearance-none focus:outline-none focus:bg-neutral-800"
         placeholder="What's happening?"
         [(ngModel)]="tweetMessage"
-        (input)="toggleShowTweetLimitCount()"
-        (click)="toggleShowDivider()"
-        (focus)="rowsWhenTweetBoxInFocus(true)"
-        (blur)="rowsWhenTweetBoxInFocus(false)"
+        (input)="showTweetLimitCount()"
+        (click)="showDividerAndIncreaseRows()"
       ></textarea>
 
       <div *ngIf="showDivider" class="mt-1 mb-3 border-b-[1px] border-gray-700"></div>
@@ -22,12 +18,12 @@
   <div class="flex justify-between items-center gap-3">
     <div class="icons ml-12">
       <ul class="flex gap-2">
-        <li class="cursor-pointer text-sky-500"><lucide-icon name="image"></lucide-icon></li>
-        <li class="cursor-pointer text-sky-500"><lucide-icon name="laugh"></lucide-icon></li>
-        <li class="cursor-pointer text-sky-500"><lucide-icon name="list"></lucide-icon></li>
-        <li class="cursor-pointer text-sky-500"><lucide-icon name="smile"></lucide-icon></li>
-        <li class="cursor-pointer text-sky-500"><lucide-icon name="calendar-clock"></lucide-icon></li>
-        <li class="text-sky-500 opacity-50"><lucide-icon name="map-pin"></lucide-icon></li>
+        <li class="flex w-7 h-7 p-1 text-sky-500 rounded-full cursor-pointer hover:bg-sky-950"><lucide-icon name="image"></lucide-icon></li>
+        <li class="flex w-7 h-7 p-1 text-sky-500 rounded-full cursor-pointer hover:bg-sky-950"><lucide-icon name="laugh"></lucide-icon></li>
+        <li class="flex w-7 h-7 p-1 text-sky-500 rounded-full cursor-pointer hover:bg-sky-950"><lucide-icon name="list"></lucide-icon></li>
+        <li class="flex w-7 h-7 p-1 text-sky-500 rounded-full cursor-pointer hover:bg-sky-950"><lucide-icon name="smile"></lucide-icon></li>
+        <li class="flex w-7 h-7 p-1 text-sky-500 rounded-full cursor-pointer hover:bg-sky-950"><lucide-icon name="calendar-clock"></lucide-icon></li>
+        <li class="flex w-7 h-7 p-1 text-sky-500 rounded-full opacity-50"><lucide-icon name="map-pin"></lucide-icon></li>
       </ul>
     </div>
     <div class="flex items-center gap-3">
@@ -35,7 +31,7 @@
         <span *ngIf="showCountChars" class="text-xs text-gray-400">{{ tweetRemaining }}</span>
       </div>
       <div class="tweet-button">
-        <button (click)="postTweet()" class="py-1 px-3 bg-sky-500 border border-blue-500 font-semibold rounded-3xl duration-200 hover:opacity-90">Tweet</button>
+        <button (click)="postTweet()" class="py-1 px-4 bg-sky-500 border border-blue-500 font-semibold rounded-3xl duration-200 hover:opacity-90">Tweet</button>
       </div>
     </div>
   </div>

@@ -4,8 +4,11 @@
   </header>
   <main class="flex-1 border-x-[1px] border-gray-700">
     <app-new-post></app-new-post>
+    <div *ngFor="let tweet of tweets">
+      <app-tweet [tweetMessage]="tweet"></app-tweet>
+    </div>
   </main>
   <aside class="w-80">
-    <app-tweet></app-tweet>
+    
   </aside>
 </div>

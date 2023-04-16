@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MessagesService } from 'src/app/services/messages.service';
 
 @Component({
   selector: 'app-new-post',
@@ -13,12 +14,12 @@ export class NewPostComponent implements OnInit {
   showDivider: boolean = false;
   rows: number = 1;
 
-  constructor() { }
+  constructor(private service: MessagesService) { }
 
   ngOnInit(): void {
   }
 
-  toggleShowTweetLimitCount() {
+  showTweetLimitCount() {
     if(this.tweetMessage.length > 0 ) {
       this.showCountChars = true;
       this.tweetRemaining = this.tweetMaxLength - this.tweetMessage.length;
@@ -27,17 +28,18 @@ export class NewPostComponent implements OnInit {
     }
   }
 
-  toggleShowDivider() {
+  showDividerAndIncreaseRows() {
     this.showDivider = true;
-  }
-
-  rowsWhenTweetBoxInFocus(focus: boolean) {
-    focus ? this.rows = 2 : this.rows = 1;
+    this.rows = 2;
   }
 
   postTweet() {
-    alert(this.tweetMessage)
+    this.service.addMessage(this.tweetMessage);
     this.tweetMessage = '';
+    this.tweetRemaining = this.tweetMaxLength;
+    this.showCountChars = false;
+    this.showDivider = false;
+    this.rows = 1;
   }
 
 }

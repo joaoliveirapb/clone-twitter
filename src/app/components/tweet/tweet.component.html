@@ -1,1 +1,21 @@
-<p>tweet works!</p>
+<div class="py-2 px-3 flex gap-3 border-y-[1px] border-gray-700">
+  <app-avatar></app-avatar>
+  <div class="w-full">
+    <div class="flex gap-1">
+      <p>João</p>
+      <span class="text-sm text-gray-500">@joaoliveirapb</span>
+    </div>
+    <div class="mb-3">
+      <p class="text-sm">{{ tweetMessage }}</p>
+    </div>
+    <div>
+      <ul class="flex gap-14">
+        <li class="flex w-6 h-6 p-1 text-gray-500 cursor-pointer rounded-full hover:text-sky-500 hover:bg-sky-950"><lucide-icon name="message-circle"></lucide-icon></li>
+        <li class="flex w-6 h-6 p-1 text-gray-500 cursor-pointer rounded-full hover:text-green-500 hover:bg-green-950"><lucide-icon name="arrow-left-right"></lucide-icon></li>
+        <li class="flex w-6 h-6 p-1 text-gray-500 cursor-pointer rounded-full hover:text-red-500 hover:bg-red-950"><lucide-icon name="heart"></lucide-icon></li>
+        <li class="flex w-6 h-6 p-1 text-gray-500 cursor-pointer rounded-full hover:text-sky-500 hover:bg-sky-950"><lucide-icon name="bar-chart-2"></lucide-icon></li>
+        <li class="flex w-6 h-6 p-1 text-gray-500 cursor-pointer rounded-full hover:text-sky-500 hover:bg-sky-950"><lucide-icon name="share"></lucide-icon></li>
+      </ul>
+    </div>
+  </div>
+</div>
