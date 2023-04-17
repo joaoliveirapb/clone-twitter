@@ -31,7 +31,7 @@
         <span *ngIf="showCountChars" class="text-xs text-gray-400">{{ tweetRemaining }}</span>
       </div>
       <div class="tweet-button">
-        <button (click)="postTweet()" class="py-1 px-4 bg-sky-500 border border-blue-500 font-semibold rounded-3xl duration-200 hover:opacity-90">Tweet</button>
+        <button (click)="postTweet()" class="py-1 px-4 bg-sky-500 border border-blue-500 font-semibold rounded-3xl duration-200 disabled:opacity-70 hover:opacity-90" [disabled]="disabledButton">Tweet</button>
       </div>
     </div>
   </div>

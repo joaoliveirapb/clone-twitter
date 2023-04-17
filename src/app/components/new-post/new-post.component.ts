@@ -13,6 +13,7 @@ export class NewPostComponent implements OnInit {
   showCountChars: boolean = false;
   showDivider: boolean = false;
   rows: number = 1;
+  disabledButton: boolean = true;
 
   constructor(private service: MessagesService) { }
 
@@ -23,8 +24,10 @@ export class NewPostComponent implements OnInit {
     if(this.tweetMessage.length > 0 ) {
       this.showCountChars = true;
       this.tweetRemaining = this.tweetMaxLength - this.tweetMessage.length;
+      this.disabledButton = false;
     } else {
       this.showCountChars = false;
+      this.disabledButton = true;
     }
   }
 
@@ -40,6 +43,7 @@ export class NewPostComponent implements OnInit {
     this.showCountChars = false;
     this.showDivider = false;
     this.rows = 1;
+    this.disabledButton = true;
   }
 
 }
