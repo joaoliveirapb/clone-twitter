@@ -1,0 +1,14 @@
+<div *ngFor="let perfil of perfils" class="flex justify-between items-center p-3 cursor-pointer hover:bg-neutral-700/30">
+  <div class="flex items-center gap-3">
+    <div>
+      <app-avatar firstLetterOfTheName="{{ perfil.firstLetterOfTheName }}"></app-avatar>
+    </div>
+    <div class="flex flex-col">
+      <p class="leading-none font-semibold">{{ perfil.perfilsName }}</p>
+      <span class="text-sm text-gray-500">{{ perfil.username }}</span>
+    </div>
+  </div>
+  <div>
+    <button class="bg-white text-sm text-black font-semibold py-1 px-3 rounded-3xl hover:opacity-90">Follow</button>
+  </div>
+</div>

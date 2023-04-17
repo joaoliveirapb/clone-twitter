@@ -1,0 +1,26 @@
+<div class="flex flex-col gap-4 ml-6">
+  <div class="mt-2 relative">
+    <input type="text" class="w-full py-2 px-12 text-sm bg-neutral-800 rounded-3xl outline-none focus:border border-sky-500" placeholder="Search Twitter">
+    <lucide-icon name="search" class="absolute left-3 top-[50%] translate-y-[-50%] text-gray-500"></lucide-icon>
+  </div>
+
+  <div class="bg-neutral-800 rounded-lg">
+    <h2 class="text-lg font-bold my-2 mx-3">What's happening</h2>
+
+    <app-trending></app-trending>
+
+    <div class="py-2 rounded-b-lg cursor-pointer hover:bg-neutral-700/30">
+      <span class="my-2 mx-3 text-sm text-sky-500">Show more</span>
+    </div>
+  </div>
+
+  <div class="bg-neutral-800 rounded-lg">
+    <h2 class="text-lg font-bold my-2 mx-3">Who to follow</h2>
+
+    <app-people-to-follow></app-people-to-follow>
+
+    <div class="py-2 rounded-b-lg cursor-pointer hover:bg-neutral-700/30">
+      <span class="my-2 mx-3 text-sm text-sky-500">Show more</span>
+    </div>
+  </div>
+</div>
