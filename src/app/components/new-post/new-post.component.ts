@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MessagesService } from 'src/app/services/messages.service';
 
 @Component({
@@ -12,7 +12,7 @@ export class NewPostComponent implements OnInit {
   tweetRemaining: number = this.tweetMaxLength;
   showCountChars: boolean = false;
   showDivider: boolean = false;
-  rows: number = 1;
+  @Input() lines: string = '0';
   disabledButton: boolean = true;
 
   constructor(private service: MessagesService) { }
@@ -33,7 +33,9 @@ export class NewPostComponent implements OnInit {
 
   showDividerAndIncreaseRows() {
     this.showDivider = true;
-    this.rows = 2;
+    if(this.lines === '1') {
+      this.lines = '2';
+    }
   }
 
   postTweet() {
@@ -42,7 +44,7 @@ export class NewPostComponent implements OnInit {
     this.tweetRemaining = this.tweetMaxLength;
     this.showCountChars = false;
     this.showDivider = false;
-    this.rows = 1;
+    if(this.lines === '2') this.lines = '1';
     this.disabledButton = true;
   }
 

@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
-import { LucideAngularModule, Home, Hash, Bell, Mail, Bookmark, Twitter, User, MoreHorizontal, Image, Laugh, List, Smile, CalendarClock, MapPin, MessageCircle, ArrowLeftRight, Heart, BarChart2, Share, Search } from 'lucide-angular';
+import { LucideAngularModule, Home, Hash, Bell, Mail, Bookmark, Twitter, User, MoreHorizontal, Image, Laugh, List, Smile, CalendarClock, MapPin, MessageCircle, ArrowLeftRight, Heart, BarChart2, Share, Search, X } from 'lucide-angular';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -33,7 +33,7 @@ import { TrendingComponent } from './components/trending/trending.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    LucideAngularModule.pick({ Home, Hash, Bell, Mail, Bookmark, Twitter, User, MoreHorizontal, Image, Laugh, List, Smile, CalendarClock, MapPin, MessageCircle, ArrowLeftRight, Heart, BarChart2, Share, Search })
+    LucideAngularModule.pick({ Home, Hash, Bell, Mail, Bookmark, Twitter, User, MoreHorizontal, Image, Laugh, List, Smile, CalendarClock, MapPin, MessageCircle, ArrowLeftRight, Heart, BarChart2, Share, Search, X })
   ],
   providers: [
     MessagesService

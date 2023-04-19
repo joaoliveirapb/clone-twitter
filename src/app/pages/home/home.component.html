@@ -3,7 +3,7 @@
     <app-header></app-header>
   </header>
   <main class="flex-1 border-x-[1px] border-gray-700">
-    <app-new-post></app-new-post>
+    <app-new-post lines="1"></app-new-post>
     <div class="flex flex-col-reverse">
       <app-tweet *ngFor="let tweet of tweets" [tweetMessage]="tweet"></app-tweet>
     </div>
