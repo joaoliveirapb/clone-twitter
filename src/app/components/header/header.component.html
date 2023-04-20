@@ -40,7 +40,7 @@
       </ul>
     </nav>
     <div class="tweet-button">
-      <button (click)="openModalNewPost()" class="w-full p-3 bg-sky-500 border border-sky-600 font-bold text-base rounded-3xl duration-200 hover:opacity-90">Tweet</button>
+      <button (click)="modalService.openModalNewPost()" class="w-full p-3 bg-sky-500 border border-sky-600 font-bold text-base rounded-3xl duration-200 hover:opacity-90">Tweet</button>
     </div>
   </div>
   <div>
@@ -57,10 +57,10 @@
     </a>
   </div>
 
-  <div *ngIf="modalNewPost" (click)="closeModalWhenClickOut($event)" id="modal" class="fixed inset-0 bg-white/10 flex justify-center items-center">
-    <div class="h-max w-1/4 py-2 bg-neutral-950 rounded-xl">
-      <button (click)="closeModalNewPost()" class="flex ml-1 p-1 w-7 h-7 rounded-full hover:bg-neutral-800"><lucide-icon name="x"></lucide-icon></button>
-      <app-new-post lines="4"></app-new-post>
+  <div *ngIf="modalService.modalNewPost" (click)="modalService.closeModalWhenClickOut($event)" id="modal" class="fixed inset-0 bg-white/10 flex justify-center items-center">
+    <div class="h-max w-4/12 py-2 bg-neutral-950 rounded-xl">
+      <button (click)="modalService.closeModalNewPost()" class="flex ml-1 p-1 w-7 h-7 rounded-full hover:bg-neutral-800"><lucide-icon name="x"></lucide-icon></button>
+      <app-new-post lines="5"></app-new-post>
     </div>
   </div>
 </div>

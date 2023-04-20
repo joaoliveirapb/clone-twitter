@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MessagesService } from 'src/app/services/messages.service';
+import { ModalService } from 'src/app/services/modal.service';
 
 @Component({
   selector: 'app-new-post',
@@ -15,7 +16,7 @@ export class NewPostComponent implements OnInit {
   @Input() lines: string = '0';
   disabledButton: boolean = true;
 
-  constructor(private service: MessagesService) { }
+  constructor(private service: MessagesService, private modalService: ModalService) { }
 
   ngOnInit(): void {
   }
@@ -46,6 +47,7 @@ export class NewPostComponent implements OnInit {
     this.showDivider = false;
     if(this.lines === '2') this.lines = '1';
     this.disabledButton = true;
+    this.modalService.closeModalNewPost();
   }
 
 }

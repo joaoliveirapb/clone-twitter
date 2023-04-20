@@ -10,12 +10,13 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TweetComponent } from './components/tweet/tweet.component';
 import { NewPostComponent } from './components/new-post/new-post.component';
-
-import { MessagesService } from './services/messages.service';
 import { AvatarComponent } from './components/avatar/avatar.component';
 import { SearchComponent } from './components/search/search.component';
 import { PeopleToFollowComponent } from './components/people-to-follow/people-to-follow.component';
 import { TrendingComponent } from './components/trending/trending.component';
+
+import { MessagesService } from './services/messages.service';
+import { ModalService } from './services/modal.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { TrendingComponent } from './components/trending/trending.component';
     LucideAngularModule.pick({ Home, Hash, Bell, Mail, Bookmark, Twitter, User, MoreHorizontal, Image, Laugh, List, Smile, CalendarClock, MapPin, MessageCircle, ArrowLeftRight, Heart, BarChart2, Share, Search, X })
   ],
   providers: [
-    MessagesService
+    MessagesService,
+    ModalService
   ],
   bootstrap: [AppComponent]
 })

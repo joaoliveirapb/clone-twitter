@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalService } from 'src/app/services/modal.service';
 
 @Component({
   selector: 'app-header',
@@ -6,24 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  modalNewPost: boolean = false;
 
-  constructor() { }
+  constructor(public modalService: ModalService) { }
 
   ngOnInit(): void {
-  }
-
-  openModalNewPost() {
-    this.modalNewPost = true;
-  }
-
-  closeModalNewPost() {
-    this.modalNewPost = false;
-  }
-
-  closeModalWhenClickOut(e: MouseEvent) {
-    const theTarget = e.target as HTMLElement;
-    if(theTarget.id === 'modal') this.closeModalNewPost()
   }
 
 }
