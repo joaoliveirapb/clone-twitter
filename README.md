@@ -8,6 +8,8 @@ Assim como o Twitter original, esse clone faz publicações de tweets.
 
 ![preview](./.github/preview.png)
 
+[🔗 Clique aqui para acessar](https://clone-twitter-roan.vercel.app/)
+
 ## 🛠️ Tecnologias
 
 - Angular
